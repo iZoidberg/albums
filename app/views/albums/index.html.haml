@@ -1,0 +1,15 @@
+%h1 Your Albums
+%table
+  %tr
+    %th Title
+    %th Artist
+    %th
+    %th
+  - @albums.each do |album|
+    %tr
+      %td= album.title
+      %td= album.artist
+      %td= link_to 'Delete', album, :confirm => 'Are you sure you want to delete this item?', :method => :delete
+      %td= link_to 'Edit', edit_album_path(album.id)
+
+%div= link_to 'Create new album', new_album_path

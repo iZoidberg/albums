@@ -1,2 +1,7 @@
 - create new rails app with and include some gems (5 min)
-- authentication: check devise usage and make it running
+- authentication: check devise usage and make it running (10min)
+- create basic layout in HAML (10 min)
+- albums controller (10 min)
+- install cucumber and write tests for login (30min)
+- install rspec and test scope (by_user) in albums controller#index (20 min)
+- complete album controller and write a cucumber test (45 min)

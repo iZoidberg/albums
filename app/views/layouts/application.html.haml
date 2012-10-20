@@ -1,0 +1,31 @@
+!!! 5
+%html
+  %head
+    %title Albums
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    %meta(charset="utf-8")
+    %meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+  %body
+    %header
+      .logo Albums
+      %div
+        - if user_signed_in?
+          Logged in as
+          =current_user.email
+          |
+          = link_to "Logout", destroy_user_session_path, :method => :delete
+        - else
+          = link_to "Login", new_user_session_path
+          or
+          = link_to "SignUp", new_user_registration_path
+    .content
+      - if flash.present?
+        %div(id="flash")
+          - flash.each do |type, message|
+            %div{:class => [type, 'message']}
+              = message
+      = yield
+    %footer
+      %small Albums - Manage your Music - RoR rocks!

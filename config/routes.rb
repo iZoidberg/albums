@@ -1,4 +1,10 @@
 Albums::Application.routes.draw do
+  resources :albums
+
+  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout', :sign_up => 'register'}
+
+  root :to => 'albums#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
