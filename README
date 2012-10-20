@@ -1,0 +1,20 @@
+Task:
+Please take not more than 2 hours for solving the task. You can push it back to your github.
+
+Build a ruby on rails application to manage your music album collection using test-driven development.
+It should be possible to create a user account, to sign in and out and as a user to search your own albums.
+For the albums users can upload covers which can be displayed in different sizes.
+The implementation code should be so DRY, restful and resource-oriented and well-tested that a documentation is superfluous.
+For testing we strongly recommend using rspec and either cucumber or steak/rspec request specs.
+Focus on writing tests (more important than the actual app). Scaffolding isn't allowed.
+
+Done:
+Authentication with devise gem
+Create, list, edit, delete albums
+
+Not finished due to time limitation:
+searching albums and picture upload
+
+Tests are written with cucumber and rspec. Unfortunately I had not enough time. So the code coverage is bad.
+Inserting albums and logging in is covered by a cucumber test. The album model is tested by rspec
+(only the scope by_user).
